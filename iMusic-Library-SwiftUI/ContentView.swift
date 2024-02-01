@@ -24,6 +24,7 @@ struct LibraryContentView: View {
                 
             }
             .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
     }
