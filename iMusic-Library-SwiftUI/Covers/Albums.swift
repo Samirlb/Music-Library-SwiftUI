@@ -9,15 +9,16 @@ class Albums {
     
     private func createAlbums() {
         let albumDetails = [
-            (name: AlbumName.wawandcoPlaylist, image: AlbumImage.firstCover, genre: AlbumGenre.pop),
-            (name: AlbumName.newSongs, image: AlbumImage.secondCover, genre: AlbumGenre.reggaeton),
-            (name: AlbumName.globalViral, image: AlbumImage.thirdCover, genre: AlbumGenre.rock),
-            (name: AlbumName.topGlobal, image: AlbumImage.fourthCover, genre: AlbumGenre.hipHop),
-            (name: AlbumName.oldSoftRock, image: AlbumImage.fifthCover, genre: AlbumGenre.softRock)
+            (name: AlbumName.wawandcoPlaylist, image: AlbumImage.firstCover, genre: AlbumGenre.pop, song: AlbumSong.wawandcoPlaylist),
+            (name: AlbumName.newSongs, image: AlbumImage.secondCover, genre: AlbumGenre.reggaeton, song: AlbumSong.newSongs),
+            (name: AlbumName.global50, image: AlbumImage.thirdCover, genre: AlbumGenre.rock, song: AlbumSong.global50),
+            (name: AlbumName.topGlobal, image: AlbumImage.fourthCover, genre: AlbumGenre.hipHop, song: AlbumSong.topGlobal),
+            (name: AlbumName.oldSoftRock, image: AlbumImage.fifthCover, genre: AlbumGenre.softRock, song: AlbumSong.oldSoftRock)
         ]
 
         for detail in albumDetails {
             let album = self.createAlbum(name: detail.name, image: detail.image, genre: detail.genre)
+            self.setSongs(album, song: detail.song)
             self.addAlbum(album)
         }
     }
@@ -32,10 +33,14 @@ class Albums {
         return album
     }
     
-    func addAlbum(_ album: Album) {
+    private func addAlbum(_ album: Album) {
         if !self.albums.contains(where: { $0.name == album.name }) {
             self.albums.append(album)
         }
+    }
+    
+    private func setSongs(_ album: Album, song: AlbumSong) {
+        album.updateSong(song)
     }
     
     func getAllAlbums() -> [Album] {

@@ -21,6 +21,12 @@
 		3756357E2B6AB0D200EAA7EE /* RowDetailTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375635792B6AB0D200EAA7EE /* RowDetailTitle.swift */; };
 		3756357F2B6AB0D200EAA7EE /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756357A2B6AB0D200EAA7EE /* Albums.swift */; };
 		375635812B6AD94000EAA7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375635802B6AD94000EAA7EE /* Assets.xcassets */; };
+		37894A7B2B726CB000D8C134 /* OneRepublic - Counting Stars.flac in Resources */ = {isa = PBXBuildFile; fileRef = 37894A762B726CB000D8C134 /* OneRepublic - Counting Stars.flac */; };
+		37894A7C2B726CB000D8C134 /* MAX - STRINGS (feat. JVKE   Bazzi).flac in Resources */ = {isa = PBXBuildFile; fileRef = 37894A772B726CB000D8C134 /* MAX - STRINGS (feat. JVKE   Bazzi).flac */; };
+		37894A7D2B726CB000D8C134 /* MAX - IT'S YOU (feat. keshi).flac in Resources */ = {isa = PBXBuildFile; fileRef = 37894A782B726CB000D8C134 /* MAX - IT'S YOU (feat. keshi).flac */; };
+		37894A7E2B726CB000D8C134 /* The Weeknd - Save Your Tears.flac in Resources */ = {isa = PBXBuildFile; fileRef = 37894A792B726CB000D8C134 /* The Weeknd - Save Your Tears.flac */; };
+		37894A7F2B726CB000D8C134 /* Rex Orange County - THE SHADE.flac in Resources */ = {isa = PBXBuildFile; fileRef = 37894A7A2B726CB000D8C134 /* Rex Orange County - THE SHADE.flac */; };
+		37894A812B72714900D8C134 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37894A802B72714900D8C134 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		375635792B6AB0D200EAA7EE /* RowDetailTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowDetailTitle.swift; sourceTree = "<group>"; };
 		3756357A2B6AB0D200EAA7EE /* Albums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 		375635802B6AD94000EAA7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37894A762B726CB000D8C134 /* OneRepublic - Counting Stars.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OneRepublic - Counting Stars.flac"; sourceTree = "<group>"; };
+		37894A772B726CB000D8C134 /* MAX - STRINGS (feat. JVKE   Bazzi).flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MAX - STRINGS (feat. JVKE   Bazzi).flac"; sourceTree = "<group>"; };
+		37894A782B726CB000D8C134 /* MAX - IT'S YOU (feat. keshi).flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MAX - IT'S YOU (feat. keshi).flac"; sourceTree = "<group>"; };
+		37894A792B726CB000D8C134 /* The Weeknd - Save Your Tears.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Weeknd - Save Your Tears.flac"; sourceTree = "<group>"; };
+		37894A7A2B726CB000D8C134 /* Rex Orange County - THE SHADE.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rex Orange County - THE SHADE.flac"; sourceTree = "<group>"; };
+		37894A802B72714900D8C134 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 			children = (
 				3704FB0B2B6BDF74003D02C7 /* CoverImageCollectionCell.swift */,
 				3704FB0D2B6BDFA8003D02C7 /* DetailsTableCell.swift */,
+				37894A802B72714900D8C134 /* PlayerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -118,6 +131,7 @@
 		375635492B6AAF5100EAA7EE /* iMusic-Library-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				37894A752B726CB000D8C134 /* Songs */,
 				3704FB0A2B6BDF49003D02C7 /* Components */,
 				375635752B6AB0D200EAA7EE /* Covers */,
 				3756354A2B6AAF5100EAA7EE /* iMusic_Library_SwiftUIApp.swift */,
@@ -164,6 +178,18 @@
 				3756357A2B6AB0D200EAA7EE /* Albums.swift */,
 			);
 			path = Covers;
+			sourceTree = "<group>";
+		};
+		37894A752B726CB000D8C134 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				37894A762B726CB000D8C134 /* OneRepublic - Counting Stars.flac */,
+				37894A772B726CB000D8C134 /* MAX - STRINGS (feat. JVKE   Bazzi).flac */,
+				37894A782B726CB000D8C134 /* MAX - IT'S YOU (feat. keshi).flac */,
+				37894A792B726CB000D8C134 /* The Weeknd - Save Your Tears.flac */,
+				37894A7A2B726CB000D8C134 /* Rex Orange County - THE SHADE.flac */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				375635812B6AD94000EAA7EE /* Assets.xcassets in Resources */,
+				37894A7B2B726CB000D8C134 /* OneRepublic - Counting Stars.flac in Resources */,
+				37894A7D2B726CB000D8C134 /* MAX - IT'S YOU (feat. keshi).flac in Resources */,
+				37894A7F2B726CB000D8C134 /* Rex Orange County - THE SHADE.flac in Resources */,
 				375635532B6AAF5F00EAA7EE /* Preview Assets.xcassets in Resources */,
+				37894A7E2B726CB000D8C134 /* The Weeknd - Save Your Tears.flac in Resources */,
+				37894A7C2B726CB000D8C134 /* MAX - STRINGS (feat. JVKE   Bazzi).flac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +330,7 @@
 				3704FB0E2B6BDFA8003D02C7 /* DetailsTableCell.swift in Sources */,
 				3756357C2B6AB0D200EAA7EE /* AlbumDetails.swift in Sources */,
 				3756354D2B6AAF5100EAA7EE /* ContentView.swift in Sources */,
+				37894A812B72714900D8C134 /* PlayerView.swift in Sources */,
 				3756357E2B6AB0D200EAA7EE /* RowDetailTitle.swift in Sources */,
 				3756354B2B6AAF5100EAA7EE /* iMusic_Library_SwiftUIApp.swift in Sources */,
 				3756357F2B6AB0D200EAA7EE /* Albums.swift in Sources */,

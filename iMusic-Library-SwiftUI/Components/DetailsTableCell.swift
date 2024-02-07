@@ -9,7 +9,7 @@ struct DetailsTableCell: View {
             Text(title)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-            Text(description)
+            Text(description + " ")
                 .foregroundColor(Color("descriptionColor"))
             Rectangle()
                 .fill(Color.secondary)
@@ -18,9 +18,8 @@ struct DetailsTableCell: View {
     }
 }
 
-struct DetailsTableCellPrevie: PreviewProvider {
+struct DetailsTableCellPreview: PreviewProvider {
     static var previews: some View {
         DetailsTableCell(title: "Test", description: "Test")
     }
-    
 }

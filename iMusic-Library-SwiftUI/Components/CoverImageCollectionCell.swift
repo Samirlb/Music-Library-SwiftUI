@@ -1,23 +1,22 @@
 import SwiftUI
 
 struct CoverImageCollectionCell: View {
-    var imageName: String
-    @Binding var currentAlbum: Int
-    let index: Int
+    @Binding var currentAlbum: Album
+    let album: Album
     
     var body: some View {
-        Image(imageName)
+        Image(album.imageName)
             .resizable(resizingMode: .stretch)
             .frame(width: 128, height: 128)
             .onTapGesture {
-                self.currentAlbum = self.index
+                self.currentAlbum = album
             }
     }
 }
 
 struct CoverImageCellPreview: PreviewProvider {
-    @State static var currentAlbum: Int = 0
+    @State static var currentAlbum: Album = Albums().getAllAlbums().first ?? Album()
     static var previews: some View {
-        CoverImageCollectionCell(imageName: "firstCover", currentAlbum: $currentAlbum, index: 0)
+        CoverImageCollectionCell(currentAlbum: $currentAlbum, album: Album())
     }
 }

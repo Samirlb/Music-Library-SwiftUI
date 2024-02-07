@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct LibraryContentView: View {
-    @State var albums: [Album] = []
-    @State var currentAlbum = 0
+    @State var albums: [Album] = Albums().getAllAlbums()
+    @State var currentAlbum: Album = Album()
     
     var body: some View {
         List {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(albums.indices, id: \.self) { index in
-                        CoverImageCollectionCell(imageName: albums[index].imageName, currentAlbum: $currentAlbum, index: index)
+                        CoverImageCollectionCell(currentAlbum: $currentAlbum, album: albums[index])
                     }
                     
                 }
@@ -19,7 +19,7 @@ struct LibraryContentView: View {
             .listRowInsets(EdgeInsets())
             .padding()
                         
-            ForEach(albums[currentAlbum].getRowDetails(), id: \.self) { album in
+            ForEach(currentAlbum.getRowDetails(), id: \.self) { album in
                 DetailsTableCell(title: album.title.rawValue, description: album.detail)
                 
             }
@@ -27,11 +27,12 @@ struct LibraryContentView: View {
             .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
+        PlayerView(album: $currentAlbum)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryContentView(albums: Albums().getAllAlbums())
+        LibraryContentView()
     }
 }

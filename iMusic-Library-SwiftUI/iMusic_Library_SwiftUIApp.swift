@@ -11,7 +11,7 @@ import SwiftUI
 struct iMusic_Library_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            LibraryContentView(albums: Albums().getAllAlbums())
+            LibraryContentView()
         }
     }
 }
